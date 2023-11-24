@@ -1,0 +1,28 @@
+1. Download Cuda Tool Kit after change directory
+  -> https://developer.nvidia.com/cuda-downloads 
+  Change directory the place other than "Download" 
+  ex) mkdir Work
+      cd Work
+      mkdir cuda_driver
+      cd !$
+      "Donload Cuda Tool AKit"
+      nvidia-smi 
+      
+2. Download CuDNN
+  -> https://developer.nvidia.com/login *Log in or sign up for nvidia account
+  ex) "Donload CuDNN"
+      mv ~/Donload/cudnn-local-repo-ubuntu...deb .
+      sudo depkg -i cudnn-local-repo...deb
+      ls -l /usr /share/keyrings
+      sudo cp /var/cudnn-local-repo-*/cudnn-*-keyring.gpg /share/keyrings/
+      sudo apt -get update
+      sudo apt install libcudnn8
+      sudo apt install libcudnn8-dev
+      sudo apt install libcudnn8-samples
+      cd cudnn_samples_v8/
+      cd RNN_v8.0/
+      make
+      ./RNN
+
+3. Clone the DeepSeeMi
+  -> https://github.com/GuoxunZhang-THU/DeepSeMi.git
